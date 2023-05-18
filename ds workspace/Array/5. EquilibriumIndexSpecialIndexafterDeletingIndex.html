@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>After deleting index sum of even and sum of odd index equal</title>
+<head>
+  <script>
+let arr= [4,3,2,7,6,-2];
+function deleteByIndex(index){
+ let newArr =[];
+      for(let i=0,j=0;i<arr.length;i++){
+      if(i==index)continue;
+      newArr[j++] =arr[i];
+      }
+      return newArr;
+
+};
+
+let sumE=0,sumO=0,count=0;
+function countSpecialIndex(arr){
+ for(let i=0;i<arr.length;i++){
+       let newArr=  deleteByIndex(i);
+       for(let j =0; j<newArr.length;++j){
+         if(j%2==0)sumE += newArr[j];
+           else
+          sumO +=newArr[j];
+         if(sumE== sumO)count++;
+       }
+  
+ }
+ document.write(count);
+}
+
+countSpecialIndex(arr);
+  </script>
+</head>
+<body>
+    
+</body>
+</html>

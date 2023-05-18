@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <script>
+        function printSumOfSubArray(arr){
+        
+        for(let s=0;s<arr.length;s++){
+           for(let end =s;end<arr.length;end++){
+            let sum =0;
+              for(let m=s;m<=end;m++){
+                sum +=arr[m];
+              }
+              document.write (sum+"<br>");
+           }
+        }
+        }
+        
+        
+        
+        let a= [2,8,9];
+          printSumOfSubArray(a);// T(n3) S(1)
+           </script>
+</head>
+<body>
+    
+</body>
+</html>

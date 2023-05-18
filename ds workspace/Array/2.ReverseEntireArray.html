@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script>
+function reverseArray( arr ,start, end)
+{
+while(start<end){
+    let temp =arr[start];
+    arr[start]= arr[end];
+    arr[end]= temp;
+    start++;
+    end--;
+}
+//T(n/2) ,S(1)
+
+}
+let arr = [1,2,3,4];
+reverseArray(arr,0,arr.length -1);
+document.write(arr);
+    </script>
+
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Given an array elements counts Count the number of elements which are
+     greater than any of element on right side of an arra
+        ex.  arr[7]= {-3.-2,7,8,4,8,5}
+        ans 5 , aise 5 element hai jinse chhote exist krte hai
+    </title>
+    <script>
+
+        // Javascript implementation
+        
+        // Function to return the count
+        function count_greater(arr, n)
+        {
+            let min = Number.MAX_VALUE;
+            let counter = 0;
+        
+            // Comparing the given element
+            // with minimum element till
+            // occurred till now.
+            for(let i = n - 1; i >= 0; i--)
+            {
+                if (arr[i] > min)
+                {
+                    counter++;
+                }
+        
+                // Updating the min variable
+                if (arr[i] <= min)
+                {
+                    min = arr[i];
+                }
+            }
+            return counter;
+        }
+        
+        // Driver code
+        let arr = [ 3, 2, 1, 2, 3, 4, 5 ];
+        let n = arr.length;
+        
+        document.write(count_greater(arr, n) + "<br>");
+        
+        // This code is contributed by rishavmahato348
+        
+        </script>
+        
+</head>
+<body>
+    
+</body>
+</html>

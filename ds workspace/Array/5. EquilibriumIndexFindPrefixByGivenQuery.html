@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+
+
+
+        function prefixEven(arr){ 
+          
+            let py=[];
+            py[0]=arr[0];
+           
+            for(let i=1; i <arr.length;i++){
+             
+            if(i%2==0){
+             py[i]=arr[i]+py[i-1];
+            }
+            else
+              py[i]= py[i-1];
+            }
+            return py;
+        }
+        function  prefixEvenFindByQuery(arr,start,end){
+          let out = prefixEven(arr);
+          if(start==0)
+          document.write(out[end]);
+          else
+          document.write(out[end]-out[start-1]);
+
+        }
+        
+       
+        var arr = [3, 4, -2, 8, 6, 2, 1, 3];
+        // prefix[6]- prefix[1]= 8-3= 5
+//prefixEvenFindByQuery(arr,2,6);// 5
+prefixEvenFindByQuery(arr,3,7);// 7
+
+;
+document.write(out);
+
+
+
+  </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+
+       // let arr = [15,-1,7,2,5,4,2,3],count =0;
+       let arr = [15,-1,7,2,5,4,2,3],count =0;
+       
+        for (let index = 0; index <= arr.length-2; index++) {
+            let max = arr[index];
+            let flag =true;
+          for (let j = index+1; j < arr.length-1; j++) {
+            if(max<arr[j]){
+                flag =false;
+                break;
+            };
+            
+          }
+          if(flag)count++;
+            
+        }
+        document.write(count);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

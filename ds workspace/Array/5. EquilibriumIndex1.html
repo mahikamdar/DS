@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+function equilibrium( arr , end)
+{
+   let leftsum =0;
+  
+   for(let i= 0; i<=end;i++){
+     if(leftsum == sum - arr[i]) return true;
+     else{
+      leftsum += arr[i];
+      sum -= arr[i];
+     }
+   }
+return false ;
+}
+
+
+        function summazion(arr,start,end){// 
+            let j =0;
+            let summ =0;
+            for(let i=start; i <=end;i++){
+              summ += arr[i];
+            }
+            return summ;
+        }
+let arr =[-3,2,4,-1];
+let sum = summazion(arr,0,arr.length-1);
+;
+document.write(equilibrium(arr,arr.length-1));
+
+
+
+  </script>
+</head>
+<body>
+    
+</body>
+</html>

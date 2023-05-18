@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> how many letter are starting with vowel</title>
+  <script>
+
+//let s  ="mahendra";
+//expected =ahendra,endra,a
+
+let s ="adh";
+let set = new Set(['a','e','i','o','u','A','E','I','O','U']);
+let count =0;
+for(let i =0 ;i<s.length;i++){
+ if(set.has(s[i]))count += s.length -i;
+}
+document.write(count);
+  </script>
+</head>
+<body>
+    
+</body>
+</html>

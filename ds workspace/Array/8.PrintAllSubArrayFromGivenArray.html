@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Find all subarray and its sum</title>
+   <script>
+function printSubArray(arr){
+
+for(let s=0;s<arr.length;s++){
+   for(let end =s;end<arr.length;end++){
+      for(let m=s;m<=end;m++){
+         document.write(arr[m]);
+      }
+      document.write ("<br>");
+   }
+}
+}
+
+
+
+let a= [2,8,9];
+  printSubArray(a);// T(n3) S(1)
+   </script>
+</head>
+<body>
+    
+</body>
+</html>

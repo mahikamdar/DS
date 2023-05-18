@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+ <script>
+  var arr= [1,2,3,4,5];
+  var x =11;
+  var maxSum = Number.MIN_VALUE;
+  var preSum= [];
+  preSum[0]=arr[0];
+  for(let k =1;k<arr.length;k++){
+      preSum[k] =preSum[k-1]+arr[k];
+    }
+  var count =0;
+  for(let i =0,sum=0; i<arr.length;i++){ 
+  for(let j =i; j<arr.length;j++){
+   if(i==0)sum=preSum[j];
+   else sum = preSum[j]- preSum[i-1];
+   if(x>=sum)maxSum= Math.max(maxSum,sum);
+  }
+  
+  }
+  document.write(maxSum);
+  </script>
+    </head>
+    <body>
+
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+function equilibrium( arr , end)
+{
+   let left =0;
+   let right =0;
+   let count =0;
+   for(let i= 0; i<=end;i++){
+    if(i==0)left =0;
+    else
+      left = p[i-1];
+      right = p[end]- p[i];
+    
+    if(left == right)count++;
+   }
+return count;
+}
+
+
+        function preSum(arr,start,end){// T(n + n)  S(N)
+            let j =0;
+            let preSumarr =[];
+            for(let i=start; i <=end;i++){
+                if(i ==0)preSumarr[i] = arr[i];
+                else
+                preSumarr[i] = preSumarr[i-1]+ arr[i];
+            }
+            return preSumarr;
+        }
+//let arr =[-3,2,4,-1];
+let arr =[-7,1,5,2,-4,3,0]
+let p = preSum(arr,0,arr.length-1);
+;
+document.write(equilibrium(arr,arr.length-1));
+
+
+
+  </script>
+</head>
+<body>
+    
+</body>
+</html>

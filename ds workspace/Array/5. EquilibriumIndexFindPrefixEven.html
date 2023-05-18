@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+
+
+
+        function prefixEven(arr,start,end){ 
+          
+            let py=[];
+           
+            for(let i=0; i <=end;i++){
+              if(i==0){
+                py[i]=arr[i];
+                continue;
+              }
+            if(i%2==0){
+             py[i]=arr[i]+py[i-1];
+            }
+            else
+              py[i]= py[i-1];
+            }
+            return py;
+        }
+let arr =[3,-2,4,6,-3,5];
+let out = prefixEven(arr,0,arr.length-1);
+;
+document.write(out);
+
+
+
+  </script>
+</head>
+<body>
+    
+</body>
+</html>

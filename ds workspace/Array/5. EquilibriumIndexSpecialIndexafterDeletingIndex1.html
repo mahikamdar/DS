@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>After deleting index sum of even and sum of odd index equal</title>
+<head>
+  <script>
+
+//let arr= [4,3,2,7,6,-2];
+var preEven=[];
+var preOdd =[];
+function findEvenPrefixAndOddPrefix(arr){
+ 
+preEven[0]=arr[0];
+preOdd[0]=0;
+  for(let i=1;i<arr.length;i++){
+    if(i%2==0){
+     preEven[i]= preEven[i-1] +arr[i];
+     preOdd[i] =preOdd[i-1];
+    }else{
+      preEven[i]= preEven[i-1];
+      preOdd[i]= preOdd[i-1]+arr[i];
+    }
+  }
+}
+
+//expected preEven [4,4,6,6,12,12], preOdd [0,3,3,10,10,8]
+function findSpecialIndex(arr){
+  let count=0;
+  let sumE=0;
+let sumO=0;
+  for(let i =0;i<arr.length;i++){
+    if(i !=0){
+      sumE =preEven[i-1] +preOdd[arr.length-1] -preOdd[i];
+    }else
+    sumE =preOdd[arr.length-1] -preOdd[i];
+  
+  if(i !=0){
+    sumO = preOdd[i-1] +preEven[arr.length-1] -preEven[i];
+  }
+  else
+  sumO =preEven[arr.length-1] -preEven[i];
+  if(sumE == sumO)count++;
+}
+document.write(count);
+}
+var arr= [4,3,2,7,6,-2];
+findEvenPrefixAndOddPrefix(arr);
+findSpecialIndex(arr);
+  </script>
+</head>
+<body>
+    
+</body>
+</html>

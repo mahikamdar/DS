@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+   
+    function min(array){
+        let m =Math.max;
+        for (let i = 0; i < array.length; i++) {
+           if(array[i]<m){
+            m =array[i];
+           }
+            
+        }return m;
+    }
+
+    function max(array){
+        let m =Math.min;
+        for (let i = 0; i < array.length; i++) {
+           if(array[i]>m){
+            m =array[i];
+           }
+            
+        }return m;
+    }
+
+    function findLength(arr){
+        let count =Math.max;
+        if(maximum == minimum)return 1;
+        else
+        {
+            for (let i = 0; i < arr.length-1; i++) {
+                if(arr[i]==maximum)
+                for (let j = i+1; j < arr.length; j++) {
+                if(arr[i]===minimum){
+                    count = Math.min(count, j-i+1);
+                    break;
+                }
+                
+            }
+
+            if(arr[i]==minimum)
+                for (let j = i+1; j < arr.length; j++) {
+                if(arr[i]===maximum){
+                    count = Math.min(count, j-i+1);
+                    break;
+                }
+                
+            }
+                
+            }
+
+        }
+        return count;
+    } 
+    let arr =[2,2,6,4,5,1,5,2,6,4,1];
+    let minimum = min(arr);
+    let maximum = max(arr);
+   let length = findLength(arr);
+   document.write(length);
+
+   </script>
+    </head>
+    <body>
+
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+   let min = Number.MAX_VALUE;
+   let max= Number.MIN_VALUE;
+    function minMax(array){
+      
+       
+        for (let i = 0; i < array.length; i++) {
+          min = Math.min(min,arr[i]);
+          max = Math.max(max,arr[i]);
+            
+        }
+        document.write(min+" "+max);
+    }
+function findMinLengthSubArray(arr){
+let count =0;
+let i = 0;
+let start =0;
+    for(; i<arr.length;i++){
+        if(min==max)
+        return 1;
+
+        if(min== arr[i] || max==arr[i]){
+          start = i++;
+          break;
+        }
+
+   }
+    
+   for(; i<arr.length;i++){
+       
+        if(min== arr[i] || max==arr[i]){
+         if(arr[i]==arr[start])start =i;
+         else
+         count = Math.min(count,i-start+1);
+        }
+
+   }
+
+}
+  
+
+  
+    let arr =[2,2,6,4,5,1,5,2,6,4,1];
+   minMax(arr);
+   findMinLengthSubArray(arr);
+   // document.write(minimum);
+   
+
+   </script>
+    </head>
+    <body>
+
+    </body>
+</html>

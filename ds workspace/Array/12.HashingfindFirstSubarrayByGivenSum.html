@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+   //let arr =[1,2,3,4,5];
+   //let B=5;
+   let arr = [5,10,20,100,105];
+   let B =120;
+   //expected (2,3)
+let map = new Map();
+let start=-1,end=0,sum=0;
+for(let i=0;i<arr.length;i++){
+    sum +=arr[i];
+    if(sum==B){
+        start =0;
+        end =i;
+        break;
+    }
+  else{
+    if(map.has(sum-B)==false){
+        map.set(sum,i);
+    }else{
+        start= map.get(sum-B)+1;
+        end =i;
+        break;
+    }
+     
+  }
+
+}
+if(start ==-1){
+    document.write("not avaliable");
+}else
+for(let i=start;i<=end;i++)
+document.write(arr[i]+", ");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+ <script>
+  var arr= [1,2,3,4,5];
+  var x =11;
+  var maxSum = Number.MIN_VALUE;
+  
+ 
+  for(let i =0,sum=0; i<arr.length;i++){ 
+  for(let j =i; j<arr.length;j++){
+   sum +=arr[j];
+   if(x>=sum)maxSum= Math.max(maxSum,sum);
+  }
+  
+  }
+  document.write(maxSum);
+  </script>
+    </head>
+    <body>
+
+    </body>
+</html>
