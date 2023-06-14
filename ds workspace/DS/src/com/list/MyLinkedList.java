@@ -10,17 +10,37 @@ Node head;
 		l.add(40);
 		l.add(50);
 		l.printLs();
-		l.delete(10);
+		//l.delete(10);
+		//l.printLs();
+		l.update(30,70);
 		l.printLs();
-		l.update(10,70);
-	}
-
-	private void update(int i, int j) {
-		
+	Node node=	l.indextAt(4);
+	System.out.println(node.data);
 		
 	}
 
-	private void delete(int i) {
+	public Node indextAt(int i) {
+		Node node = head;
+		int j=0;
+		while(node !=null) {
+			if(j ==i)
+				return node;
+			node = node.next;
+			j++;
+		}
+		return null;
+	}
+
+	public void update(int given, int update) {
+		if(head ==null)return;
+		Node temp = head;
+		while(temp !=null && temp.data !=given)
+			temp = temp.next;
+		if(temp !=null && temp.data ==given)
+			temp.data =update;
+	}
+
+	public void delete(int i) {
 		Node temp = head;
 		Node prev =null;
 		while(temp != null) {
@@ -38,7 +58,7 @@ Node head;
 		
 	}
 
-	private void printLs() {
+	public void printLs() {
 		Node temp = head;
 		while(temp !=null) {
 			if(temp.next !=null)
@@ -51,7 +71,7 @@ Node head;
 		
 	}
 
-	private void add(int i) {
+	public void add(int i) {
 		
 		Node temp = new Node(i);
 		if(head == null)head =temp;
