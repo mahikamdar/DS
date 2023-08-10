@@ -25,8 +25,8 @@ private static void printLevel(Node root) {
 	q.add(root);
 		while(!q.isEmpty()) {
 			
-			
-			for(int i=0;i<q.size();i++) {
+			int n = q.size();
+			for(int i=0;i<n;i++) {
 				Node temp = q.poll();
 				System.out.print(temp.data+", ");
 				if(temp.left !=null) q.add(temp.left);

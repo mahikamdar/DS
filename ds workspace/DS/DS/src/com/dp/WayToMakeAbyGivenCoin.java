@@ -19,7 +19,7 @@ public class WayToMakeAbyGivenCoin {
 				}
 				else
 					t[i][j]= t[i-1][j]+t[i][j-coins[i]];
-			}
+			} 
 		}
 		
 		System.out.println(t[coins.length-1][weight]);
